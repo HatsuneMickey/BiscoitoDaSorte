@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%
+}
+
+body {
+    background: linear-gradient(45deg, #190361, #bb00ff);
+	animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+    font-size: 1.6rem;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+main {
+    background: #FFFFFF;
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1);
+    border-radius: .6rem;
+    padding: 4.8rem 6.4rem 6.4rem;
+    width: min(42.8rem, 90%);
+    text-align: center;
+}
+
+.screen1, .screen2 {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 2.4rem;
+}
+
+.hide {
+    display: none;
+}
+
+h1, h2 {
+    color: #34355B;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.4rem;
+}
+
+p {
+    color: #34355B;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+#retryButton {
+    padding: 1.6rem;
+    gap: 1rem;
+    width: 18rem;
+    border-radius: 4px;
+    background: #FF9500;
+    box-shadow: 2px 2px 2px 0 rgba(58, 28, 0, 0.5);
+    color: #FFFFFF; 
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.fortune {
+    background: #E4EDF1;
+    box-shadow: 2px 2px 2px 0 rgba(85, 85, 85, 0.50);
+	-webkit-animation: slide-in-fwd-bottom 1.5s ease-out;
+    animation: slide-in-fwd-bottom 1.5s ease-out;
+}
+
+.fortune p {
+    font-family: 'Dancing Script', sans-serif;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2.4rem;
+    color: #000;
+}
+
+#cookie img:hover {
+    -webkit-animation: wobble-hor-bottom 1s ease-in infinite both;
+    animation: wobble-hor-bottom 1s ease-in infinite both;
+}
+
+@-webkit-keyframes wobble-hor-bottom {
+    0%, 100% {  
+        -webkit-transform: translateX(0%);
+                transform: translateX(0%);
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+    }
+    15% {
+        -webkit-transform: translateX(-3rem) rotate(-6deg);
+                transform: translateX(-3rem) rotate(-6deg);
+    }
+    30% {
+        -webkit-transform: translateX(1.5rem) rotate(6deg);
+                transform: translateX(1.5rem) rotate(6deg);
+    }
+    45% {
+        -webkit-transform: translateX(-1.5rem) rotate(-3.6deg);
+                transform: translateX(-1.5rem) rotate(-3.6deg);
+    }
+    60% {
+        -webkit-transform: translateX(.9rem) rotate(2.4deg);
+                transform: translateX(.9rem) rotate(2.4deg);
+    }
+    75% {
+        -webkit-transform: translateX(-.6rem) rotate(-1.2deg);
+                transform: translateX(-.6rem) rotate(-1.2deg);
+    }
+}
+
+@keyframes wobble-hor-bottom {
+    0%, 100% {
+        -webkit-transform: translateX(0%);
+                transform: translateX(0%);
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+    }
+    15% {
+        -webkit-transform: translateX(-3rem) rotate(-6deg);
+                transform: translateX(-3rem) rotate(-6deg);
+    }
+    30% {
+        -webkit-transform: translateX(1.5rem) rotate(6deg);
+                transform: translateX(1.5rem) rotate(6deg);
+    }
+    45% {
+        -webkit-transform: translateX(-1.5rem) rotate(-3.6deg);
+                transform: translateX(-1.5rem) rotate(-3.6deg);
+    }
+    60% {
+        -webkit-transform: translateX(.9rem) rotate(2.4deg);
+                transform: translateX(.9rem) rotate(2.4deg);
+    }
+    75% {
+        -webkit-transform: translateX(-.6rem) rotate(-1.2deg);
+                transform: translateX(-.6rem) rotate(-1.2deg);
+    }
+}
+
+@-webkit-keyframes slide-in-fwd-bottom {
+    0% {
+        -webkit-transform: translateY(15rem) scale(0);
+        transform: translateY(15rem) scale(0);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0) scale(1);
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+    @keyframes slide-in-fwd-bottom {
+    0% {
+        transform: translateY(15rem) scale(0);
+        opacity: 0; 
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
